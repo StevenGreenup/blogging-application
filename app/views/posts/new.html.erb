@@ -1,0 +1,22 @@
+<div class="container">
+
+
+
+<h1>New Post</h1>
+<br><%= link_to 'Cancel', posts_path, class:"btn btn-default"%><br>
+
+<div class="well">
+
+
+<%= form_for @post do |f| %>
+  <div class="">
+    <%= f.label :title %> :<br>
+    <%= f.text_field :title %><br>
+    <%= f.label :Body %> :<br>
+    <%= f.text_area :content %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
+</div>
+</div>

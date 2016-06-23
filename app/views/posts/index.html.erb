@@ -1,0 +1,14 @@
+<div class="container">
+
+
+
+<%= link_to 'Create New Post', new_post_path, class:"btn btn-default" %>
+<ul>
+  <% @posts.each do |post| %>
+    <div class="well well-sm">
+      <h3><%= link_to post.title, post_path(id: post.id)%></h3>
+          <%= post.content%>
+    </div>
+  <% end %>
+</ul>
+</div>
